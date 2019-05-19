@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Assignment
+{% endblock %}
+
+{% block main%}
+<form action = "/add_assignment" method = "post">
+    What class is it for?<br/>
+    <select name="class">
+        {% for hw in assignments%}
+            <option value = {{hw[1]}}> {{hw[1]}}</option>
+        {% endfor%}
+    </select>
+    <br/>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

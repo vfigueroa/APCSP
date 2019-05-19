@@ -1,0 +1,9 @@
+0. TODO
+the dimensions of the board are d by d squares where d is an command line argument inputed by the user.
+d must be greater than DIM_MIN (3) and less than DIM_MAX (9).
+1. TODO
+an array
+2. TODO
+Greet()
+3. TODO
+init(), draw(), move() and won()

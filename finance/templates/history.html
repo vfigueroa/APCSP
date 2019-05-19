@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <table "table-stripped">
+        <th>Symbol</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>Time</th>
+        {% for trade in history%}
+            <tr>
+                <td>{{trade["symbol"]}}</td>
+                <td>{{trade["bought_shares"]}}</td>
+                <td>{{trade["price"]}}</td>
+                <td>{{trade["time"]}}</td>
+            </tr>
+        {%endfor%}
+    </table>
+{% endblock %}

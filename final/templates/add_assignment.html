@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Assignment
+{% endblock %}
+
+{% block main%}
+<form action = "/add_assignment" method = "post">
+    What is the assignment named? <br/>
+    <input type="text" name="name"><br/>
+    what is its priority?<br/>
+    <input type="radio" name="priority" value="5">lowest<br/>
+    <input type="radio" name="priority" value="4">low<br/>
+    <input type="radio" name="priority" value="3">mid<br/>
+    <input type="radio" name="priority" value="2">high<br/>
+    <input type="radio" name="priority" value="1">highest<br/>
+    What class is it for?<br/>
+    <select name="class">
+        {% for class in classes%}
+            <option value = {{class}}> {{class}}</option>
+        {% endfor%}
+    </select>
+    <br/>
+    When is it due? <br/>
+    <input type="date" name="due_date" value="Datetime">Date<br/>
+    <br/>
+    Discription of the assignment: <br/>
+    <textarea name="discription" cols="40" rows="5"></textarea>
+    <br/>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
