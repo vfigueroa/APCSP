@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body%}
+<form action="{{ url_for('index') }}" method = "post">
+    What is your name: <br/>
+    <input type="text" name="name"><br/>
+    What is your quest:<br/>
+    <input type="radio" name="quest" value="grail"> I seek the grail.<br/>
+     <input type="radio" name="quest" value="grade"> I just want an A.<br/>
+     What is ypur favorite color?:<br/>
+     <select name="color">
+         <option value="blue">Blue</option>
+         <option value="red">Red</option>
+         <option value="oops">Blue..... no.....</option>
+     </select>
+     <button type="submit">Submit</button>
+</form>
+{% endblock %}
