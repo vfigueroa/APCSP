@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Class
+{% endblock %}
+
+{% block main %}
+
+    <form action="/add_class" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Class Name" type="text"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Add Class</button>
+    </form>
+{% endblock %}

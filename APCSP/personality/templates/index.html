@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block body%}
+<form action="{{ url_for('index') }}" method = "post">
+    What is your name: <br/>
+    <input type="text" name="name"><br/>
+    What would you like to watch:<br/>
+    <input type="radio" name="show" value="1">The Blacklist<br/>
+    <input type="radio" name="show" value="2">The Notebook<br/>
+    <input type="radio" name="show" value="3">Scary Movie<br/>
+    <input type="radio" name="show" value="4">The Shining<br/>
+    <input type="radio" name="show" value="5">I HATE NETFLIX<br/>
+    What is your favorite color?:<br/>
+    <select name="color">
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="green">green</option>
+        <option value="yellow">yellow</option>
+        <option value="none">color is arbatrary and no two people see color the same anyways</option>
+    </select>
+    <br/>
+    What food would you like to eat? <br/>
+    <input type="radio" name="food" value="burger">Burger<br/>
+    <input type="radio" name="food" value="pizza">Pizza<br/>
+    <input type="radio" name="food" value="tacos">Tacos<br/>
+    <input type="radio" name="food" value="easymac">Easy Mac<br/>
+    <input type="radio" name="food" value="sushi">Sushi<br/>
+    <input type="radio" name="food" value="vindaloo">Vindaloo<br/>
+    <!--<label>-->
+    <!--    <input type="radio" name="food" value="mid"/>-->
+    <!--    <link href="{{ url_for('static', filename='burger.jpg') }}" rel="img"/>-->
+    <!--</label>-->
+    <!--<label>-->
+    <!--    <input type="radio" name="food" value="mid"/>-->
+    <!--    <link href="{{ url_for('static', filename='pizza.jpg') }}" rel="img"/>-->
+    <!--</label>-->
+    <!--<label>-->
+    <!--    <input type="radio" name="food" value="mid"/>-->
+    <!--    <link href="{{ url_for('static', filename='tacos.jpg') }}" rel="img"/>-->
+    <!--</label>-->
+    <!--<label>-->
+    <!--    <input type="radio" name="food" value="mid"/>-->
+    <!--    <link href="{{ url_for('static', filename='easymac.jpg') }}" rel="img"/>-->
+    <!--</label>-->
+    <!--<label>-->
+    <!--    <input type="radio" name="food" value="mid"/>-->
+    <!--    <link href="{{ url_for('static', filename='sushi.jpg') }}" rel="img"/>-->
+    <!--</label>-->
+    <!--<label>-->
+    <!--    <input type="radio" name="food" value="mid"/>-->
+    <!--    <link href="{{ url_for('static', filename='vindaloo.jpg') }}" rel="img"/>-->
+    <!--</label>-->
+    <br/>
+    Check all the books that you have read <br/>
+    <input type="checkbox" name="books" value="1">Zero to One<br/>
+    <input type="checkbox" name="books" value="2">Percy Jackson Series<br/>
+    <input type="checkbox" name="books" value="3">Magic TreeHouse<br/>
+    <input type="checkbox" name="books" value="4">The Book Thief<br/>
+    <input type="checkbox" name="books" value="5">Freedom Summer<br/>
+    <input type="checkbox" name="books" value="6">Harry Potter<br/>
+    <input type="checkbox" name="books" value="7">Huckleberry Finn<br/>
+    <input type="checkbox" name="books" value="8">Moby Dick<br/>
+    Did you like this quiz? <br/>
+    <select name ="y/n">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    </style>
+    <table>
+        <th>Symbol</th>
+        <th>Shares</th>
+        <th>Price</th>
+        <th>TOTAL</th>
+        {% for stock in portfolio%}
+            <tr>
+                <td>{{stock["symbol"]}}</td>
+                <td>{{stock["shares"]}}</td>
+                <td>{{stock["price_per_share"]}}</td>
+                <td>{{stock["cost"]}}</td>
+            </tr>
+        {%endfor%}
+            <tr>
+                <td>Cash Remaining</td>
+                <td></td>
+                <td></td>
+                <td>{{money}}</td>
+            </tr>
+            <tr>
+                <td>Total Assets</td>
+                <td></td>
+                <td></td>
+                <td>{{total_assets}}</td>
+            </tr>
+    </table>
+{% endblock %}

@@ -1,0 +1,55 @@
+#top
+{
+    text-align: center;
+    font-weight: bolder;
+    color: gold;
+    background-color: navy;
+    font-family: times;
+    padding: 10px;
+}
+#top:hover
+{
+    background-color: red;
+    font-family: arial;
+}
+body
+{
+    font-size: 24px;
+    color: navy;
+    background-color: tan;
+}
+#lists
+{
+    font-family: comic;
+    color: darkgreen;
+    text-align:left;
+}
+.subheading {
+    Font-family: helvetica;
+    font-size: 30px;
+    text-align: center;
+    color: red;
+}
+h7
+{
+    border: 2px dotted navy;
+    padding: 5px;
+    text-align: center;
+}
+table th, td {
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+}
+th, td {
+    padding: 5px;
+}
+#button
+{
+    width: 150px;
+    height: 75px;
+}
+.pics {
+  width:416px;
+  height:400px;
+}

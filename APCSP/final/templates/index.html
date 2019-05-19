@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    </style>
+    <h1>Welcome to the Digital LS Agenda Book!</h1>
+    <p1>You can use the add asignment tab to add homework for any of your classes.</p1>
+    <table>
+        <th>class</th>
+        <th>assignment</th>
+        <th>Due date</th>
+        <th>Discription</th>
+        {% for hw in assignments%}
+            <tr>
+                <td>{{hw["class"]}}</td>
+                <td>{{hw["name"]}}</td>
+                <td>{{hw["duedate"]}}</td>
+                <td>{{hw["discription"]}}</td>
+            </tr>
+        {%endfor%}
+    </table>
+{% endblock %}
+
+
+
+{% for class in classes %}
+            <tr>
+                <td>{{class}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        {%endfor%}
